@@ -12,11 +12,10 @@ def check_entry():
         message.config(text="Please Enter a Valid Youtube URL")
 
 
-#   """ If the Link is Valid then start Download """'
+    #   """ If the Link is Valid then start Download """'
     else:
-        print(YouTube.check_availability().)
         yt = YouTube(value)
-        YouTube.check_availability()
+        yt.check_availability()
         video_title = yt.title
         path = Path(video_title + ".mp4")
         message.config(text="Please wait, the video is Downloading!")
@@ -33,13 +32,15 @@ window = Tk()
 
 """ Resize the Window """
 window.geometry("700x500")
-window.configure(bg="#fffafa")
+photo = PhotoImage(file="Youtube_logo.png")
+window.iconphoto(False, photo)
+
 
 """ Give the Window a Title """
 window.title("Youtube Downloader")
 
 """ Create a Label and Put it on Screen """
-label1 = Label(window, text="Please Enter valid Youtube URL \n", bg='#fffafa', fg='red',
+label1 = Label(window, text="\n\n\nPlease Enter valid Youtube URL \n", fg='red',
                font=("Times New Roman", 24, 'bold'))
 label1.grid(row=0)
 label1.pack()
